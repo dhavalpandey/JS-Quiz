@@ -111,3 +111,9 @@ body.correct {
 .start {
     width: 100px;
 }
+
+.footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0px;
+}
