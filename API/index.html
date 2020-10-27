@@ -14,10 +14,8 @@
 <code id="code_1">fetch('https://gkquizapp.netlify.app/api/api.json')</code><button onclick="copyCode1()">Copy!</button>
     <script>
 function copyCode1() {
-  var copyText = document.getElementById("code_1");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999)
-  document.execCommand("copy");
+  var copyText = "fetch('https://gkquizapp.netlify.app/api/api.json')"
+  copyText.execCommand("copy");
 }
     </script>
 <br><br><p>Now you can do all sorts of things with it! Eg:</p>
