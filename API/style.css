@@ -36,6 +36,18 @@ body {
     font-size: 0.3cm;
 }
 
+.code1:hover{
+    background-color: coral;
+}
+
+.code2:hover{
+    background-color: coral;
+}
+
+.code3:hover{
+    background-color: coral;
+}
+
 .btn {
     margin: 0px;
     font-size: 12px;
@@ -73,3 +85,7 @@ body {
  a:hover{
      background-color: coral;
  }
+
+.yt{
+allign: right;
+}
