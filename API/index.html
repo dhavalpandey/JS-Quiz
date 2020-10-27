@@ -5,90 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Tutorial</title>
      <link rel="icon" type="image/png" href="https://img.icons8.com/fluent/32/000000/brain.png"/>
-    <style>
-    .tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 140px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -75px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-    </style>
+     <link rel="stylesheet" type="text/css" href="style.css"></link>
 </head>
 <body>
 <h3><u>Getting Started...</h3></u>
 <p>We have created an API for you webapps. This is live and responsive data that can update from time to time when our team chooses to fix bugs, add more content or when updating the syle of the dynamic page. Here's how you can work with our code!</p>
-<h3><u>How to link our api</u></h3>
-<br><p>You don't need an API key to use our data as we have chosen to make it as smooth and easy for you as possible! Just copy paste this code into your web apps (paste this at the beginning of your Javascript):</p>
-<input id="copy1" type="text" value="fetch('https://gkquizapp.netlify.app/api/api.json')" disabled></input><div class="tooltip"><button onclick="copyCode1()" onmouseout="outFunc()"><span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy!</button>
-    </div>
-    <script>
-       function copyCode1() {
-  var copyText = document.getElementById("copy1");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  document.execCommand("copy");
-  
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copied!"
-        }
-        
-        function outFunc() {
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copy to clipboard";
-}
-    </script>
-<br><br><p>Now you can do all sorts of things with it! Eg:</p>
-<code><div id="copy2">fetch('https://gkquizapp.netlify.app/api/api.json')<br>.then(res -> console.log(res)) </code><button onclick="copyCode2()">Copy!</button>
-    <script>
-        function copyCode2(){
-        var text2 = document.getElementById('copy2');
-        text2.select();
-            document.execCommand("Copy");
-        }
-    </script>
-    <p>Your web app code should look something like this...</p>
-    <code><div id="copy3">APP.js --> <br>const data = fetch('https://gkquizapp.netlify.app/api/api.json')<br>console.log(data)</div></code><button onclick="copyCode3()">Copy!</button>
-     <script>
-         function copyCode3(){
-        var text3 = document.getElementById('copy3');
-        text3.select();
-            document.execCommand("Copy");
-        }
-    </script>
-    <div>
-    <p>Check out our API for yourself! It's just one click away... <a href="https://gkquizapp.netlify.app/api/api.json"> CLICK ME</a>
-    </div>
-<br><br><iframe width="727" height="409" src="https://www.youtube.com/embed/cuEtnrL9-H0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</body>
-</html>
+<h3><u>How to link our API</u></h3>
+<p>You don't need an API key to use our data as we have chosen to make it as smooth and easy for you as possible! Just copy paste this code into your web apps (paste this at the beginning of your Javascript):</p>
+<div class="container">
+    <pre><code id="code1" class="code1">fetch('https://gkquizapp.netlify.app/api/api.json')</code></pre>
+    <button id="btn" class="btn" data-clipboard-target="#code1">Copy Code</button>
+</div>
+<br><p>Now you can do all sorts of things with it... For example, print it out in the console of your browser!</p>
+<div class="container">
+    <pre><code id="code2" class="code2">fetch('https://gkquizapp.netlify.app/api/api.json')<br>.then(res -> console.log(res))</code></pre>
+    <button id="btn" class="btn" data-clipboard-target="#code2">Copy Code</button>
+</div>
+<br><p>Your web app code should look something like this...</p>
+<div class="container">
+    <pre><code id="code3" class="code3">const data = fetch('https://gkquizapp.netlify.app/api/api.json')<br>console.log(data)</code></pre>
+    <button id="btn" class="btn" data-clipboard-target="#code3">Copy Code</button>
+</div>
+<p>Check out our API for yourself! It's just one click away... <a href="https://gkquizapp.netlify.app/api/api.json"> CLICK ME</a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+<script>
+    new ClipboardJS(".btn")
+</script>
