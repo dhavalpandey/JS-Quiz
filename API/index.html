@@ -19,9 +19,23 @@ function copyCode1() {
 }
     </script>
 <br><br><p>Now you can do all sorts of things with it! Eg:</p>
-<code>fetch('https://gkquizapp.netlify.app/api/api.json')<br>.then(res -> console.log(res))</code>
+<code>fetch('https://gkquizapp.netlify.app/api/api.json')<br>.then(res -> console.log(res))</code><button onclick="copyCode2()">Copy!</button>
+    <script>
+function copyCode1() {
+  var copyText1 = "fetch('https://gkquizapp.netlify.app/api/api.json')
+  .then(res -> console.log(res))"
+  copyText1.execCommand("copy");
+}
+    </script>
     <p>Your web app code should look something like this...</p>
-    <code>APP.js --> <br>const data = fetch('https://gkquizapp.netlify.app/api/api.json')<br>console.log(data)</code>
+    <code>APP.js --> <br>const data = fetch('https://gkquizapp.netlify.app/api/api.json')<br>console.log(data)</code><button onclick="copyCode3()">Copy!</button>
+     <script>
+function copyCode3() {
+  var copyText2 = "const data = fetch('https://gkquizapp.netlify.app/api/api.json')
+  console.log(data)"
+  copyText2.execCommand("copy");
+}
+    </script>
     <div>
     <p>Check out our API for yourself! It's just one click away... <a href="https://gkquizapp.netlify.app/api/api.json"> CLICK ME</a>
     </div>
