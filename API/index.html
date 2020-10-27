@@ -11,12 +11,16 @@
 <p>We have created an API for you webapps. This is live and responsive data that can update from time to time when our team chooses to fix bugs, add more content or when updating the syle of the dynamic page. Here's how you can work with our code!</p>
 <h3><u>How to link our api</u></h3>
 <br><p>You don't need an API key to use our data as we have chosen to make it as smooth and easy for you as possible! Just copy paste this code into your web apps (paste this at the beginning of your Javascript):</p>
-<code><div id="copy1">fetch('https://gkquizapp.netlify.app/api/api.json')</code><button onclick="copyCode1()">Copy!</button>
+<input id="copy1" type="text" value="fetch('https://gkquizapp.netlify.app/api/api.json')" disabled></input><button onclick="copyCode1()">Copy!</button><span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
     <script>
-        function copyCode1(){
-        var text1 = document.getElementById('copy1');
-        text1.select();
-            document.execCommand("Copy");
+       function copyCode1() {
+  var copyText = document.getElementById("copy1");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied!"
         }
     </script>
 <br><br><p>Now you can do all sorts of things with it! Eg:</p>
