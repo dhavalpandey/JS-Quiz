@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>API</title>
-         <link rel="icon" type="image/png" href="https://img.icons8.com/fluent/32/000000/brain.png"/>
-    </head>
-    <body>
-     [
   {
     question: 'What is the capital of Spain?',
     answers: [
@@ -51,6 +43,3 @@
       { text: 'USA', correct: false }
     ]
   }
-]
-    </body>
-</html>
