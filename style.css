@@ -117,3 +117,23 @@ body.correct {
     text-align: center;
     bottom: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .question {
+        font-size: medium;
+    }
+    .ctrl-btn {
+        font-size: 10px;
+        width: 60px;
+    }
+    .btn {
+        margin-left: 25%;
+        width: 85px;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        text-align: center;
+    }
+    .footer{
+        font-size: 2mm;
+    }
