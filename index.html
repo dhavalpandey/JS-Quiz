@@ -25,6 +25,22 @@
             <button id="answerReveal" class="ctrl-btn hide start">CORRECT</button>
         </div>
     </div>    
+<button data-modal-target="#modal" class="settings-btn"><img src="https://img.icons8.com/dusk/40/000000/apple-settings.png"/></button>
+        <div class="modal" id="modal">
+            <div id="modal-header">
+                <u><div class="title">Make it home!</u>
+                <button data-close-button class="close-button"><img src="https://img.icons8.com/fluent/40/000000/close-window.png"/></button>
+            </div>
+        </div>
+            <div id="modal-body">
+                <p class="text">First things first! We take your privacy very seriously... Cookies just make it easier for both us and you so that we can deliver you a better experience! 
+                    <button id="cookie" onclick="acceptCookie">Accept Cookies?</button></p>
+                    <p class="text">Now we are done with that, select your level difficulty!</p>
+            </div>
+        </div>
+        <div id="overlay"></div>
+<script src="popup.js"></script>
+<script src="cookies.js"></script>
 <div class="footer">All Rights Reserved || Dhaval Pandey™ || <a href="./API/index.html">API</a> || <a href="https://github.com/Davdud/JS-Quiz">Code </></a>©</div>
 </body>
 </html>
