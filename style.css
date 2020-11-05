@@ -39,6 +39,51 @@ body.correct {
     margin: 10px 0;
 }
 
+.btn-grad {background-image: linear-gradient(to right, #3D7EAA 0%, #FFE47A  51%, #3D7EAA  100%)}
+.btn-grad {
+   margin: 0px;
+   margin-top: 2%;
+   padding: 10px 10px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: black;
+   font-weight: bold;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+   cursor: pointer;
+ }
+
+ .btn-grad2 {background-image: linear-gradient(to right, #3D7EAA 0%, #FFE47A  51%, #3D7EAA  100%)}
+ .btn-grad2 {
+    margin: 0px;
+    margin-top: 2%;
+    margin-left: 2%;
+    padding: 10px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;
+    font-weight: bold;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+  }
+ 
+  .btn-grad2:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 .btn {
         margin: 50px;
         font-size: 20px;
