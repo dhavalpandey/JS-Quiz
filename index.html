@@ -6,12 +6,16 @@
     <title>Quiz App</title>
     <link rel="stylesheet" type="text/css" href="style.css"></link>
     <script defer src="app.js"></script>
+    <script defer src="darkmode.js"></script>
+    <script defer src="settings.js"></script>
      <link rel="icon" type="image/png" href="https://img.icons8.com/fluent/32/000000/brain.png"/>
 </head>
-<body>
+<body class="">
     <div class="container">
         <div id="question-container" class="hide">
-        <div id="question" class="question"><b><u>Question</u></b></div>
+        <div id="question" class="question">
+            <b><u>Question</u></b>
+        </div>
         <div id="answers" class="btn-grid">
             <button class="btn"></button>
             <button class="btn"></button>
@@ -22,9 +26,7 @@
         <div class="controls"></div>
             <button id="start-btn" class="ctrl-btn start">Start</button>
             <button id="next" class="ctrl-btn hide">Next</button>
-            <button id="answerReveal" class="ctrl-btn hide start">CORRECT</button>
         </div>
-    </div>    
         <div class="modal" id="modal">
             <div id="modal-header">
                 <u><div class="title">Make it home!</u>
@@ -33,10 +35,10 @@
         </div>
             <div id="modal-body">
                 <p class="text">First things first! We take your privacy very seriously... Cookies just make it easier for both us and you so that we can deliver you a better experience! 
-                   <br><button class="btn-grad" id="cookie">Accept Cookies?</button><button class="btn-grad2">Reject</button></p>
+                    <br><button class="btn-grad" id="cookie">Accept Cookies?</button><button class="btn-grad2" id="cookie">Reject</button></p></p>
             </div>
         </div>
-<button data-modal-target="#modal1" class="settings-btn"><img src="https://img.icons8.com/dusk/40/000000/apple-settings.png"/></button>
+        <button data-modal-target="#modal1" class="settings-btn"><img src="https://img.icons8.com/dusk/40/000000/apple-settings.png"/></button>
         <div class="modal1" id="modal1">
             <div id="modal-header1">
                 <u><div class="title1">Settings</u>
@@ -65,7 +67,7 @@
           </svg>
       </div>
   </div>
-<script src="popup.js"></script>
+        <script src="popup.js"></script>
 <script src="cookies.js"></script>
 <div class="footer">All Rights Reserved || Dhaval Pandey™ || <a href="./API/index.html">API</a> || <a href="https://github.com/Davdud/JS-Quiz">Code </></a>©</div>
 </body>
