@@ -1,7 +1,9 @@
 var startButton = document.getElementById('start-btn');
 var nextButton = document.getElementById('next');
 var questionContainerElement = document.getElementById('question-container')
-var answerBtn = document.getElementById('answerReveal')
+var score = 0
+var attempted = 0
+var buttons = document.getElementById('btn')
 
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answers')
@@ -44,7 +46,6 @@ function showQuestion(question) {
 function resetState() {
   clearStatusClass(document.body)
   nextButton.classList.add('hide')
-  answerBtn.classList.add('hide')
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
@@ -69,8 +70,11 @@ function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
     element.classList.add('correct')
+    attempted +=  1;
+   //console.log(attempted)
   } else {
     element.classList.add('wrong')
+    attempted += 1;
   }
 }
 
@@ -78,7 +82,6 @@ function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
 }
-
 
 const questions = [
   {
