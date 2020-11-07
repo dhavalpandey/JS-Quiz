@@ -5,6 +5,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 body {
+    --accent-color: orangered;
+    --background-color: white;
+    --text-color: black;
+    --button-text-color: var(--background-color);
+    --transition-delay: 1s;
+
     font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
@@ -13,13 +19,16 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow: hidden;
 }
 
 body.correct {
     background-color: green;
   }
   
-  body.wrong {
+body.wrong {
       background-color: red;
   }
 
@@ -103,21 +112,62 @@ body.dark{
      opacity: 1;
  }
 
-.container {
-    width: 600px;
-    max-width: 80%;
-    background-color: #ff4e00;
-    background-image: linear-gradient(315deg, #ff4300 0%, #ec9f05 74%);    
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 0 20px 10px;
-}
-
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
     margin: 10px 0;
 }
+
+.btn {
+        margin: 50px;
+        font-size: 20px;
+        padding: 15px;
+        text-align: center;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: #FFF;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        width: 150px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 25px;
+        color: black;
+        outline: none;
+}
+
+.btn {
+    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)
+}
+
+.btn:hover { background-position: right center;
+ }
+
+.ctrl-btn {
+    margin: 0px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 15px;
+    padding: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 75px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+    color: black;
+    outline: none;
+    background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)
+}
+
 
 .btn-grad {background-image: linear-gradient(to right, #3D7EAA 0%, #FFE47A  51%, #3D7EAA  100%)}
 .btn-grad {
@@ -164,57 +214,6 @@ body.dark{
     cursor: pointer;
   }
 
-.btn {
-        margin: 50px;
-        font-size: 20px;
-        padding: 15px;
-        text-align: center;
-        transition: 0.5s;
-        background-size: 200% auto;
-        color: #FFF;
-        box-shadow: 0 0 20px #eee;
-        border-radius: 10px;
-        width: 150px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        cursor: pointer;
-        display: inline-block;
-        border-radius: 25px;
-        color: black;
-        outline: none;
-        text-align: center;
-}
-
-.btn {
-    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)
-}
-
-.btn:hover { background-position: right center;
- }
-
-.ctrl-btn {
-    margin: 0px;
-    font-family: "Arial Black", Gadget, sans-serif;
-    font-size: 15px;
-    padding: 2px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: #FFF;
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    width: 75px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    cursor: pointer;
-    display: inline-block;
-    border-radius: 25px;
-    color: black;
-    outline: none;
-    background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)
-}
-
 .ctrl-btn:hover { 
     background-position: right center; 
 }
@@ -245,6 +244,7 @@ body.dark{
 
 .modal {
     align-items: center;
+    color: black;
     background-color: #7ee8fa;
     background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
     position: fixed;
@@ -344,6 +344,7 @@ body.dark{
     margin-right: 1%;
 }
 
+
 #overlay {
     position: fixed;
     opacity: 0;
@@ -380,3 +381,4 @@ body.dark{
     .footer{
         font-size: 1rem;
     }
+}
