@@ -371,12 +371,12 @@ body.dark{
         width: 60px;
     }
     .btn {
-        margin-left: 25%;
         width: 105px;
         font-size: 13px;
         text-transform: uppercase;
         font-weight: bolder;
         text-align: center;
+        allign-items: center;
     }
     .footer{
         font-size: 1rem;
