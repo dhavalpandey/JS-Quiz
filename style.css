@@ -362,6 +362,44 @@ body.dark{
     opacity: 1
 }
 
+#context-menu{
+    position: fixed;
+    z-index: 10000000;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    list-style: none;
+    padding: 10px;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    height: 160px;
+    transform: scale(0);
+    transform-origin: top left;
+}
+
+#context-menu.active{
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+}
+
+.fa{
+    padding-bottom: 5px;
+    padding-top: 3px;
+    border: none;
+    background: none;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+    margin-left: -5%;
+    display: flex;
+    margin-left: 2%;
+    justify-content: space-around;
+}
+
+.fa:hover{
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .question {
         font-size: large;
