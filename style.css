@@ -373,7 +373,7 @@ body.dark{
     color: whitesmoke;
     font-family: 'Poppins', sans-serif;
     border-radius: 20px;
-    height: 160px;
+    height: 180px;
     transform: scale(0);
     transform-origin: top left;
 }
