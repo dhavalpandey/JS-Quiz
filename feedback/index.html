@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="icon" type="image/png" href="https://img.icons8.com/fluent/32/000000/brain.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Feedback</title>
+</head>
+<body>
+    <div class="container">
+    <h1 class="h1">Send feedback&nbsp<img class="logo" src="https://img.icons8.com/fluent/40/000000/brain.png"></h1>
+    <form id="contactForm">
+    <label class="label">Name:</label>
+    <br><input type="text" name="name" id="name" class="name input" placeholder="Name" required>
+<br><br><label class="label">Email:</label>
+<br><input type="email" name="email" id="email" class="email input" placeholder="Email" email>
+<br><br><label class="label">Your message: (pssss... this is just between you and me)</label>
+<br><textarea name="message" id="message" class="message input" placeholder="Your message..."></textarea>
+<br><button class="btn">Send feedback</button>
+</form>
+</div>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
+<script src="config.js"></script>
+</body>
+</html>
