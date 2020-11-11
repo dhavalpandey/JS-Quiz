@@ -18,8 +18,12 @@ function submitForm(e){
     var name = document.querySelector('.name').value;
     var email = document.querySelector('.email').value;
     var message = document.querySelector('.message').value;
+    var submitBtn = document.getElementById('submitBtn');
 
     saveContactInfo(name, email, message);
+    document.getElementById("submitBtn").disabled = true;
+    document.getElementById('contactForm').reset();
+    submitBtn.innerText = "Sent!"
 }
 
 function saveContactInfo(name,email, message){
