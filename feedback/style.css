@@ -75,7 +75,7 @@ body{
 @media screen and (max-height: 600px){
     .container{
         height: 600px;
-        width: 200px
+        width: 300px
     }
     
     .btn{
