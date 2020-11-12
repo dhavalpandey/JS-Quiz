@@ -61,7 +61,7 @@ body{
 }
 .data{
     font-weight: bolder;
-    font-size: small;
+    font-size: medium;
     margin-bottom: 0%;
 }
 
@@ -70,11 +70,12 @@ body{
 }
 
 .label{
-   font-size: 80%;
+   font-size: 95%;
 }
 @media screen and (max-height: 600px){
     .container{
-        height: 400px;
+        height: 600px;
+        width: 200px
     }
     
     .btn{
