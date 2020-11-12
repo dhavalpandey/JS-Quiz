@@ -60,6 +60,20 @@ body{
     background-position: right center;
 }
 
+.data{
+    font-weight: bolder;
+    font-size: small;
+    margin-bottom: 0%;
+}
+
+.h1{
+    margin-top: 0%;
+}
+
+.label{
+   font-size: 80%;
+}
+
 @media screen and (max-height: 600px){
     .container{
         height: 400px;
