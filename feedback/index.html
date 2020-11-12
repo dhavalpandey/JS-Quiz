@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="icon" type="image/png" href="https://img.icons8.com/fluent/32/000000/brain.png"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -10,6 +11,7 @@
 </head>
 <body>
     <div class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg><div class="data" id="data"></div>
     <h1 class="h1">Send feedback&nbsp<img class="logo" src="https://img.icons8.com/fluent/40/000000/brain.png"></h1>
     <form id="contactForm">
     <label class="label">Name:</label>
@@ -21,6 +23,17 @@
 <br><button class="btn">Send feedback</button>
 </form>
 </div>
+    <script>
+    function callback( response ){
+        document.getElementById('data').innerHTML = response.IPv4 + "," + " " + response.country_code + "," + " " + response.country_name + "," + " " + response.postal;
+    }
+
+    $.ajax({
+
+        url: "http://geoip-db.com/jsonp/",
+        dataType: "jsonp",
+    })
+</script>
 <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
 <script src="config.js"></script>
 </body>
