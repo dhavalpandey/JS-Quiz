@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="https://img.icons8.com/fluent/32/000000/brain.png"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script defer src="config.js"></script>
     <script src="ip.js"></script>
     <title>Feedback</title>
 </head>
@@ -14,17 +15,16 @@
     <div class="container">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg><div class="data" id="data"></div>
     <h1 class="h1">Send feedback&nbsp<img class="logo" src="https://img.icons8.com/fluent/40/000000/brain.png"></h1>
-    <form id="contactForm">
+    <form id="contactForm" class="form">
     <label class="label">Name:</label>
     <br><input type="text" name="name" id="name" class="name input" placeholder="Name" required>
 <br><br><label class="label">Email:</label>
 <br><input type="email" name="email" id="email" class="email input" placeholder="Email" email>
 <br><br><label class="label">Your message: (pssss... this is just between you and me)</label>
 <br><textarea name="message" id="message" class="message input" placeholder="Your message..."></textarea>
-<br><button class="btn">Send feedback</button>
+<br><button class="btn" id="submitBtn">Send feedback</button>
 </form>
-</div>
-    <script>
+<script>
     function callback( response ){
         document.getElementById('data').innerHTML = response.IPv4 + "," + " " + response.country_code + "," + " " + response.country_name + "," + " " + response.postal;
     }
@@ -36,6 +36,5 @@
     })
 </script>
 <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
-<script src="config.js"></script>
 </body>
 </html>
