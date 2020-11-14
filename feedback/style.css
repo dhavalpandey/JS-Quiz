@@ -109,9 +109,10 @@ body{
     }
 }
 
-@media screen and (max-height: 600px){
+@media screen and (max-width: 600px){
     .container{
         height: 400px;
+        width: 300px;
     }
     
     .btn{
