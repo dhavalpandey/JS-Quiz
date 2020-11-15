@@ -81,23 +81,23 @@ body{
 }
 
 #r-arm{
-    animation: r-arm 1.8s infinite ease-out alternate;
+    animation: r-arm 1.5s infinite ease-out alternate;
 }
 
 #r-hand{
-    animation: r-arm 1.8s infinite ease-out alternate;
+    animation: r-arm 1.5s infinite ease-out alternate;
 }
 
 #l-arm{
-    animation: r-arm 1.8s infinite ease-out alternate;
+    animation: r-arm 1.5s infinite ease-out alternate;
 }
 
 #l-hand{
-    animation: r-arm 1.75s infinite ease-out alternate;
+    animation: r-arm 1.55s infinite ease-out alternate;
 }
 
 #Flag{
-    animation: r-arm 1.5s infinite ease-out alternate;
+    animation: r-arm 1.2s infinite ease-out alternate;
 }
 
 @keyframes r-arm{
