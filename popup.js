@@ -7,6 +7,7 @@ window.onload = function () {
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
+const cookie = document.getElementById('cookie');
 
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -16,6 +17,13 @@ openModalButtons.forEach(button => {
 })
 
 overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active')
+    modals.forEach(modal => {
+        closeModal(modal)
+    })
+})
+
+cookie.addEventListener('click', () => {
     const modals = document.querySelectorAll('.modal.active')
     modals.forEach(modal => {
         closeModal(modal)
