@@ -1,3 +1,4 @@
+
 *, *::before, *::after{
     box-sizing: border-box;
 }
@@ -14,8 +15,8 @@ body{
 
 .container {
     background: lightblue;
-    height: 450px;
-    width: 430px;
+    height: 420px;
+    width: 400px;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 0 20px 10px;
@@ -69,7 +70,7 @@ body{
 }
 
 .label{
-   font-size: 100%;
+   font-size: 80%;
 }
 
 .svg{
@@ -81,15 +82,15 @@ body{
 }
 
 #r-arm{
-    animation: r-arm 1.5s infinite ease-out alternate;
+    animation: r-arm 1.6s infinite ease-out alternate;
 }
 
 #r-hand{
-    animation: r-arm 1.5s infinite ease-out alternate;
+    animation: r-arm 1.55s infinite ease-out alternate;
 }
 
 #l-arm{
-    animation: r-arm 1.5s infinite ease-out alternate;
+    animation: r-arm 1.6s infinite ease-out alternate;
 }
 
 #l-hand{
@@ -97,7 +98,7 @@ body{
 }
 
 #Flag{
-    animation: r-arm 1.2s infinite ease-out alternate;
+    animation: r-arm 1.2 infinite ease-out alternate;
 }
 
 @keyframes r-arm{
@@ -109,10 +110,9 @@ body{
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-height: 600px){
     .container{
         height: 400px;
-        width: 300px;
     }
     
     .btn{
@@ -122,3 +122,78 @@ body{
         border-radius: 5px;
     }
 } 
+
+:root {
+    --white: #ffffff;
+    --snow: #f7f7f7;
+    --light-pink: #ffd5da;
+    --hot-pink: #f27d9c;
+    --gainsboro: #dcdcdc;
+  }
+  
+  .box {
+    z-index: 99;
+    width: 15rem;
+    height: 5rem;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.3rem 0.5rem var(--gainsboro);
+    border: 0.1rem solid var(--gainsboro);
+    border-radius: 5%;
+    background-color: #eec0c6;
+    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+  }
+  
+  .flashing-circle {
+    z-index: 100;
+    display: inline-block;
+    background-color: var(--white);
+    border: 0.25rem solid var(--light-pink);
+    border-radius: 100%;
+    margin: 0.1rem;
+    width: 3rem;
+    height: 3rem;
+    animation: flashing-animation 2.4s infinite;
+  }
+  
+  .flashing-circle:nth-child(2) {
+    animation-delay: -1.6s;
+  }
+  
+  .flashing-circle:nth-child(3) {
+    animation-delay: -0.8s;
+  }
+  
+  @keyframes flashing-animation {
+    0% {
+      background-color: var(--white);
+      border-color: var(--light-pink);
+    }
+    50% {
+      background-color: var(--snow);
+      border-color: var(--hot-pink);
+    }
+  }
+
+  .active{
+      display: none;
+  }
+
+  @media screen and (max-width: 768px){
+      .svg{
+          display: none;
+      }
+      .container{
+          margin-top: 10%;
+          font-size: 110%;
+          height: 460px;
+      }
+      .logo{
+          display: none;
+      }
+  }
