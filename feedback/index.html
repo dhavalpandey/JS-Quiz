@@ -8,11 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script defer src="config.js"></script>
-    <script src="ip.js"></script>
+    <script defer src="load.js"></script>
     <title>Feedback</title>
 </head>
 <body>
-    <div class="container">
+    <div class="box" id="loader">
+        <span class="flashing-circle"></span>
+        <span class="flashing-circle"></span>
+        <span class="flashing-circle"></span>
+      </div>
+    <div class="container active" id="container">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg><div class="data" id="data"></div>
     <h1 class="h1">Send feedback&nbsp<img class="logo" src="https://img.icons8.com/fluent/40/000000/brain.png"></h1>
     <form id="contactForm" class="form">
@@ -35,8 +40,8 @@
         dataType: "jsonp",
     })
 </script>
-    </div>
-    <div class="svg">
+</div>
+<div class="svg active" id="man">
     <svg width="350" height="350" viewBox="0 0 298 297" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="smaller-figure">
         <g id="Left-arm">
