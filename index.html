@@ -6,15 +6,19 @@
     <meta name="keywords" content="1388136836862817367123767361,general, general knowledge, netlify, gk, gk quiz, gk quiz netlify, gk quiz app, api, feedback, gkquizapp.netlify.com">
     <meta name="description" content="Front-end and backend javascript developing project with complex code">
     <title>Quiz App</title>
-    <link rel="stylesheet" type="text/css" href="style.css"></link>
-    <script src="load-algorithm.js"></script>
-    <script defer src="app.js"></script>
-    <script defer src="darkmode.js"></script>
-    <script defer src="settings.js"></script>
-    <script defer src="right-click.js"></script>
-    <script defer src="right-click-options.js"></script>
-     <link rel="icon" type="image/png" href="https://img.icons8.com/fluent/32/000000/brain.png"/>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/fluent/32/000000/brain.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(window).on("load", function(){
+            $("body").append("<script src='app.js'>");
+                $("body").append("<script src='right-click.js'>");
+                    $("body").append("<script src='right-click-options.js'>");
+                        $("body").append("<script src='settings.js'>");
+                            $("body").append("<script src='darkmode.js'>");
+        })
+    </script>
 </head>
 <body>
     <div class="container">
