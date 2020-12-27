@@ -109,5 +109,29 @@
         <script src="popup.js"></script>
 <script src="cookies.js"></script>
 <div class="footer">All Rights Reserved || Dhaval Pandey™ || <a href="https://github.com/Davdud/JS-Quiz">Code</a> || <a href="./api">API</a> || <a href="./feedback">Help</a></div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCzYCWd-z6E-_lqMKhN0Y07-rBpfwQD8xw",
+    authDomain: "gk-quiz-9765a.firebaseapp.com",
+    databaseURL: "https://gk-quiz-9765a.firebaseio.com",
+    projectId: "gk-quiz-9765a",
+    storageBucket: "gk-quiz-9765a.appspot.com",
+    messagingSenderId: "385707901761",
+    appId: "1:385707901761:web:5b6e08c7671516bca597c0",
+    measurementId: "G-MY2ENQP9X6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </body>
 </html>
